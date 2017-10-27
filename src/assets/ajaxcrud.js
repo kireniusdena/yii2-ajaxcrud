@@ -30,24 +30,17 @@ $(document).ready(function () {
 
         // Collect all selected ID's
         var selectedIds = [];
-        
-        // See if we have a selector set
-        var selection = 'selection';
-        if ($(this).data("selector") != null) {
-        	selection = $(this).data("selector");
-        }
-        
-        $('input:checkbox[name="' + selection + '[]"]').each(function () {
+        $('input:checkbox[name="selection[]"]').each(function () {
             if (this.checked)
                 selectedIds.push($(this).val());
         });
-
+        console.log('ini di pencet');
         if (selectedIds.length == 0) {
             // If no selected ID's show warning
             modal.show();
-            modal.setTitle('No selection');
-            modal.setContent('You must select item(s) to use this action');
-            modal.addFooterButton("Close", 'btn btn-default', function (button, event) {
+            modal.setTitle('Data Tidak Dipilih!');
+            modal.setContent('Silahkan anda pilih data terlebih dahulu!');
+            modal.addFooterButton("Tutup","button", 'btn btn-outline', function (button, event) {
                 this.hide();
             });
         } else {
