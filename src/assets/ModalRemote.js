@@ -38,7 +38,7 @@ function ModalRemote(modalId) {
      */
     this.show = function () {
         this.clear();
-        $(this.modal).modal('show');
+        $(this.modal).removeData('bs.modal').modal({backdrop: 'static', keyboard: false});
     };
 
     /**
@@ -168,7 +168,7 @@ function ModalRemote(modalId) {
             url: url,
             method: method,
             data: data,
-            async: false,
+            async: true,
             beforeSend: function () {
                 beforeRemoteRequest.call(instance);
             },
