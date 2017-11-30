@@ -38,7 +38,8 @@ function ModalRemote(modalId) {
      */
     this.show = function () {
         this.clear();
-        $(this.modal).removeData('bs.modal').modal({backdrop: 'static', keyboard: false});
+        $(this.modal).modal('show');
+        //$(this.modal).removeData('bs.modal').modal({backdrop: 'static', keyboard: false});
     };
 
     /**
