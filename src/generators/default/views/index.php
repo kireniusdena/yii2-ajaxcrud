@@ -28,6 +28,17 @@ use johnitvn\ajaxcrud\BulkButtonWidget;
 $this->title = <?= $generator->generateString(Inflector::pluralize(Inflector::camel2words(StringHelper::basename($generator->modelClass)))) ?>;
 $this->params['breadcrumbs'][] = $this->title;
 
+Modal::begin([
+    'options' => [
+        'id'       => 'ajaxCrudModal',
+        'tabindex' => false,
+        'data-backdrop'=>"static",
+        'data-keyboard'=>"false",
+    ],
+    "footer"=>"",// always need it for jquery plugin
+]);
+Modal::end();
+
 CrudAsset::register($this);
 
 ?>
@@ -73,9 +84,4 @@ CrudAsset::register($this);
         ])<?="?>\n"?>
     </div>
 </div>
-<?='<?php Modal::begin([
-    "id"=>"ajaxCrudModal",
-    "footer"=>"",// always need it for jquery plugin
-])?>'."\n"?>
-<?='<?php Modal::end(); ?>'?>
 
