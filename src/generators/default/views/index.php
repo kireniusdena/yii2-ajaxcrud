@@ -32,8 +32,8 @@ Modal::begin([
     'options' => [
         'id'       => 'ajaxCrudModal',
         'tabindex' => false,
-        'data-backdrop'=>"static",
-        'data-keyboard'=>"false",
+        'data-backdrop'=>'static',
+        'data-keyboard'=>'false',
     ],
     "footer"=>"",// always need it for jquery plugin
 ]);
