@@ -29,11 +29,11 @@ $this->title = <?= $generator->generateString(Inflector::pluralize(Inflector::ca
 $this->params['breadcrumbs'][] = $this->title;
 
 Modal::begin([
-    'options' => [
-        'id'       => 'ajaxCrudModal',
-        'tabindex' => false,
-        'data-backdrop'=>'static',
-        'data-keyboard'=>'false',
+    "options" => [
+        "id"       => "ajaxCrudModal",
+        "tabindex" => false,
+        "data-backdrop"=>"static",
+        "data-keyboard"=>"false",
     ],
     "footer"=>"",// always need it for jquery plugin
 ]);
