@@ -40,7 +40,7 @@ $(document).ready(function () {
             modal.show();
             modal.setTitle('Data Tidak Dipilih!');
             modal.setContent('Silahkan anda pilih data terlebih dahulu!');
-            modal.addFooterButton("Tutup","button", 'btn btn-outline', function (button, event) {
+            modal.addFooterButton("Tutup","button", 'btn btn-default', function (button, event) {
                 this.hide();
             });
         } else {
