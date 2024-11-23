@@ -207,7 +207,7 @@ function ModalRemote(modalId) {
         }
         this.setTitle(response.statusText + ' ' + '(#'+response.status+')');
         this.setContent(response.responseText);
-        this.addFooterButton('Close', 'button', 'btn btn-outline', function (button, event) {
+        this.addFooterButton('Close', 'button', 'btn btn-default', function (button, event) {
             this.hide();
         })
     }
